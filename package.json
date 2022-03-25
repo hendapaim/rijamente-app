@@ -35,13 +35,13 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "electron:start":"cross-env IS_DEV=false electron .",
+    "electron:start": "cross-env IS_DEV=false electron .",
     "electron:dev": "cross-env IS_DEV=true electron .",
     "electron-build": "electron-builder",
     "postinstall": "electron-builder install-app-deps",
-    "release": "npm run build && npm run electron-build",
-    "Desktop:start": "npm run build && npm run electron:start",
-    "Desktop:dev": "concurrently -k \"vite\" \"npm run electron:dev\""
+    "release": "yarn build && yarn electron-build",
+    "desktop:start": "yarn build && yarn electron:start",
+    "desktop:dev": "concurrently -k \"vite\" \"yarn electron:dev\""
   },
   "dependencies": {
     "body-parser": "^1.19.2",
@@ -53,6 +53,7 @@
     "express": "^4.17.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-router-dom": "^6.2.2",
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
