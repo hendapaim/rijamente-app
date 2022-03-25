@@ -1,7 +1,7 @@
 function Header() {
   return (
     <div class="navbar bg-base-100">
-      <div class="navbar-start" disabled>
+      <div class="navbar-start">
         <div class="dropdown">
           <label tabindex="0" class="btn btn-ghost btn-circle">
             <svg
@@ -84,7 +84,7 @@ function Header() {
         >
           <li>
             <a class="justify-between">
-              Profile
+              Perfil
               <span class="badge">New</span>
             </a>
           </li>
@@ -92,7 +92,7 @@ function Header() {
             <a>Settings</a>
           </li>
           <li>
-            <a>Logout</a>
+            <a>Sair</a>
           </li>
         </ul>
       </div>

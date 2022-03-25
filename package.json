@@ -19,17 +19,16 @@
     }
   },
   "scripts": {
-    "vite-dev": "vite",
-    "vite-build": "vite build",
+    "dev": "vite",
+    "build": "vite build",
     "preview": "vite preview",
     "electron:start":"cross-env IS_DEV=false electron .",
     "electron:dev": "cross-env IS_DEV=true electron .",
     "electron-build": "electron-builder",
     "postinstall": "electron-builder install-app-deps",
-    "release": "npm run build && electron-builder --dir",
-    "build": "npm run vite-build && npm run electron-build",
-    "start": "npm run vite-build && npm run electron:start",
-    "dev": "concurrently -k \"vite\" \"npm run electron:dev\""
+    "release": "npm run build && npm run electron-build",
+    "Desktop:start": "npm run build && npm run electron:start",
+    "Desktop:dev": "concurrently -k \"vite\" \"npm run electron:dev\""
   },
   "dependencies": {
     "body-parser": "^1.19.2",
