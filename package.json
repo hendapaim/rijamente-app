@@ -1,0 +1,57 @@
+{
+  "name": "rijamente",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Sebenta direita ao ponto",
+  "main": "app/main.js",
+  "author": {
+    "name": "Henda Paim",
+    "email": "hendapaim@gmail.com",
+    "whatapp": "(+244)931-020-749",
+    "country": "Angola"
+  },
+  "build": {
+    "appId": "com.rijamente",
+    "productName": "Rijamente",
+    "mac": {
+      "category": "public.app-category.education",
+      "icon": "./build/logo/favicon-32x32.png"
+    }
+  },
+  "scripts": {
+    "vite-dev": "vite",
+    "vite-build": "vite build",
+    "preview": "vite preview",
+    "electron:start":"cross-env IS_DEV=false electron .",
+    "electron:dev": "cross-env IS_DEV=true electron .",
+    "electron-build": "electron-builder",
+    "postinstall": "electron-builder install-app-deps",
+    "release": "npm run build && electron-builder --dir",
+    "build": "npm run vite-build && npm run electron-build",
+    "start": "npm run vite-build && npm run electron:start",
+    "dev": "concurrently -k \"vite\" \"npm run electron:dev\""
+  },
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "daisyui": "^2.11.1",
+    "electron-is-dev": "^2.0.0",
+    "electron-serve": "^1.1.0",
+    "express": "^4.17.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^1.0.7",
+    "autoprefixer": "^10.4.4",
+    "concurrently": "^7.0.0",
+    "electron": "^17.2.0",
+    "electron-builder": "^22.14.13",
+    "postcss": "^8.4.12",
+    "tailwindcss": "^3.0.23",
+    "vite": "^2.8.0",
+    "wait-on": "^6.0.1"
+  }
+}
