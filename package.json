@@ -10,6 +10,19 @@
     "whatapp": "(+244)931-020-749",
     "country": "Angola"
   },
+  "app": {
+    "url": "http://127.0.0.1",
+    "port": 72000,
+    "ioPort": 72001,
+    "node": {
+      "exe": ".\\node.exe",
+      "args": [
+        "main.js",
+        "index.js"
+      ],
+      "production": false
+    }
+  },
   "build": {
     "appId": "com.rijamente",
     "productName": "Rijamente",
