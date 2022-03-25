@@ -1,21 +1,16 @@
-import logo from "./logo.png";
-import "./App.css";
-import Header from "./components/Header";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
 
 function App() {
   return (
-    <>
-      <title>Rijamente</title>
-
-      <div className="App">
-        <Header />
-        <header className="App-header">
-          <p>Bem-Vindo a Sua sebenta!</p>
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>Estámos a criar o melhor para sua formação.</p>
-        </header>
-      </div>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/" element={<HomePage />} />
+        <Route exact path="/sobre" element={<AboutPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

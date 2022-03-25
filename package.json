@@ -12,6 +12,7 @@
   },
   "app": {
     "url": "http://127.0.0.1",
+    "apiUrl": "https://rijamente-api.herokuapp.com/",
     "port": 72000,
     "ioPort": 72001,
     "node": {
