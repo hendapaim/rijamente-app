@@ -1,8 +1,22 @@
 import { Link } from "react-router-dom";
 
+
 function Header() {
+
+  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark')
+  } else {
+    document.documentElement.classList.remove('dark')
+  }
+  
+  // // Whenever the user explicitly chooses light mode
+  // localStorage.theme = 'light'
+  
+  // // Whenever the user explicitly chooses dark mode
+  // localStorage.theme = 'dark'
+
   return (
-    <div class="navbar bg-base-100">
+    <div class="navbar bg-base-100 dark:bg-black">
       <div class="navbar-start">
         <div class="dropdown">
           <label tabindex="0" class="btn btn-ghost btn-circle">
@@ -95,7 +109,7 @@ function Header() {
       </div>
       <div class="dropdown dropdown-end">
         <label tabindex="0" class="btn btn-ghost btn-circle avatar">
-          <div class="w-10 rounded-full">
+          <div class="w-10 mask mask-squircle">
             <img src="https://api.lorem.space/image/face?hash=33791" />
           </div>
         </label>
@@ -104,10 +118,10 @@ function Header() {
           class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
         >
           <li>
-            <a class="justify-between">
+            <Link to="/in/email" class="justify-between">
               Perfil
               <span class="badge">New</span>
-            </a>
+            </Link>
           </li>
           <li>
             <a>Settings</a>

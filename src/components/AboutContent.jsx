@@ -1,6 +1,6 @@
 import React from "react";
 
-function Content() {
+function AboutContent() {
   return (
     <div class="hero min-h-screen bg-base-200">
       <div class="hero-content text-center">
@@ -16,4 +16,4 @@ function Content() {
   );
 }
 
-export default Content;
+export default AboutContent;

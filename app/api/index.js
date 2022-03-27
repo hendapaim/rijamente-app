@@ -1,24 +1,30 @@
-var express = require("express");
+const express = require("express");
 const cors = require("cors");
-var path = require("path");
-var bodyParser = require("body-parser");
-var index = require("./routes/index");
+const path = require("path");
+const bodyParser = require("body-parser");
 
-var app = express();
-const port = process.env.PORT || 7667;
-// view engine setup
+// Routes
+const index = require("./routes/index");
+const aluno = require("./routes/aluno")
+
+let {
+  app: { port },
+} = require("../../package.json");
+
+const app = express();
+port = port || process.env.PORT;
 
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
-//Routers
+//Route
 app.use("/", index);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
-  var err = new Error("Not Found");
+  const err = new Error("Not Found");
   err.status = 404;
   next(err);
 });

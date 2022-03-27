@@ -1,5 +1,5 @@
 import React from "react";
-import Content from "../components/Content";
+import AboutContent from "../components/AboutContent";
 import Header from "../components/Header";
 
 function AboutPage() {
@@ -8,7 +8,7 @@ function AboutPage() {
       <title>Sobre | Rijamente</title>
 
       <Header />
-      <Content />
+      <AboutContent />
     </>
   );
 }
