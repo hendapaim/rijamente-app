@@ -6,7 +6,6 @@ function PerfilPage() {
   return (
     <>
       <title>Perfil | Rijamente</title>
-      <Header />
       <div className="p-4">
         <div class="card w-100 bg-base-100 shadow-md mb-4">
           <div class="card-body">

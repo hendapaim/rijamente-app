@@ -7,7 +7,6 @@ function AboutPage() {
     <>
       <title>Sobre | Rijamente</title>
 
-      <Header />
       <AboutContent />
     </>
   );
